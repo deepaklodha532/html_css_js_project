@@ -1,0 +1,82 @@
+*{
+    box-sizing:box-sizing ;
+
+}
+body{
+    font-family: sans-serif; 
+    display: flex; 
+    align-items: center ; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0 ; 
+    background-color: rgb(5,5,5);
+    color: #fff;
+}
+
+.container{
+    display: flex ; 
+    width: 100vw;
+
+}
+
+
+
+.image-1{
+    background: url(https://4kwallpapers.com/images/walls/thumbs_3t/15534.jpg);
+}
+.image-2{
+    background: url("https://wi.wallpapertip.com/wsimgs/41-415844_assassins-creed-anime-hd.jpg");
+}
+.image-3{
+    background: url(https://c4.wallpaperflare.com/wallpaper/174/597/135/assasins-creed-syndicate-wallpaper-preview.jpg);
+}
+.image-4{
+    background: url(https://i.pinimg.com/originals/bc/9d/b7/bc9db7c166056be1afe0279b4f490467.jpg);
+}
+.image-5{
+    background: url(image/4.png);
+}
+.bg-image{
+    background-size: cover;
+    background-position: center ; 
+    background-repeat: no-repeat ;
+    
+} 
+div .slide{
+    position: relative ; 
+     height: 80vh; 
+     flex:0.5;
+     border-radius: 50px;
+     color: #fff;
+     margin:10px;  
+     cursor: pointer;
+     transition:all 700ms ease-in ;
+}
+
+
+
+.slide h3{
+    position: absolute;
+    bottom: 20px; 
+    left: 20px; 
+    margin: 0 ;
+    opacity: 0;
+    font-size: 24px;
+}
+
+@media (max-width:480px) {
+    .slide:nth-of-type(4),
+    .slide:nth-of-type(5)
+    {
+        display: none;
+    }
+}
+/* java script  */
+
+.slide.active{
+    flex:5;
+}
+.slide.active h3{
+    opacity: 1 ;
+    transition: opacity 0.3s ease-in 0.4s ;
+}
